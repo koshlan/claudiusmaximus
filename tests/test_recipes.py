@@ -1,4 +1,9 @@
+import sys
 import unittest
+from pathlib import Path
+
+# Let the tests run straight from a checkout, without `pip install`.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from espresso_calc import build_recipe
 from espresso_calc.cli import run
