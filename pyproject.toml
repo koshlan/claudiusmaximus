@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "espresso-calc"
+version = "0.1.0"
+description = "Interactive calculator for espresso drink beans, shot volume and milk volume."
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+espresso-calc = "espresso_calc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
