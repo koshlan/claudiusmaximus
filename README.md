@@ -47,3 +47,13 @@ What cup size? (small = 240 ml, medium = 360 ml, large = 480 ml) > medium
 ```bash
 python -m unittest discover -s tests
 ```
+
+The tests need no install step: `tests/test_recipes.py` adds `src/` to the
+import path, so the command above works right after cloning.
+
+## Continuous integration
+
+Every pull request runs the **Tests** GitHub Actions workflow
+(`.github/workflows/tests.yml`). It sets up Python 3.11, installs the package
+with `pip install -e .`, and runs the unit tests. To see the output, open the
+PR's **Checks** tab and click the **Tests** job.
